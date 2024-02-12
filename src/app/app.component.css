@@ -1,0 +1,10 @@
+.done{
+    text-decoration: line-through;
+}
+.modify{
+    background-color: transparent;
+    border:0;
+}
+.mid:hover{
+    cursor: pointer;
+}

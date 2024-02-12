@@ -1,0 +1,21 @@
+<h1 class="text-center">Todo App</h1>
+<div class="main-container">
+  <div class="container d-flex justify-content-center gap-3">
+    <input [(ngModel)]="newTodo" type="text" id="text" placeholder="Write Todo">
+    <button type="button" class="btn btn-primary" (click)="makeTodo()">Add</button>
+  </div>
+  <table class="table text-center table-striped">
+    <tbody>
+      <tr class="row">
+        <th class="col">LP</th>
+        <th class="col-6">Name</th>
+        <th class="col">Usuń</th>
+      </tr>
+      <tr class="row" *ngFor="let todo of todos;let i =index;">
+        <th class="col">{{i+1}}</th>
+        <th class="col-6 {{(todo.isCompleted)?'done':''}} mid" (click)="done(i)">{{todo.name}}</th>
+        <th class="col"><button type="button" class='modify' (click)="clear(i)">X</button></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
